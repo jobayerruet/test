@@ -17,10 +17,10 @@ Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/estimate-fraud-proba
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
 {: .note }
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.lt
-- support@markid.lt
-- info@markid.lt
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - support@markid.lt
+> - info@markid.lt
 
 <br/>
 
