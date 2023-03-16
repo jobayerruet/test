@@ -9,3 +9,8 @@ callouts:
   important:
     title: Important
     color: purple
+
+  caution:
+    title: Caution
+    color: red
+
