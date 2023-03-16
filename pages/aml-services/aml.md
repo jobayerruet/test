@@ -10,7 +10,7 @@ nav_order: 2
 
 This service checks whether given person is in PEP or sanctions list, checks adverse media.
 
-:::note  Pricing
+{: .note }  Pricing
 Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
 :::
 

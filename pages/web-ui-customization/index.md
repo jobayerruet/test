@@ -54,7 +54,7 @@ Default platform view without customization.
 
 You can provide your company's logo to replace our company's logo. This way your customers may feel that they are still using your company's functionality.
 
-:::note
+{: .note }
 Provided logo must be in .svg format.
 
 <img alt="Logo customization example." width="700" src='https://documentation.markid.eu/resources/logo-view.png' />
@@ -63,7 +63,7 @@ Provided logo must be in .svg format.
 
 You can change the primary color of your layout.
 
-:::note
+{: .note }
 Provided colors must be in hex format e.g. #4286f4
 
 <img alt="Primary color example." width="700" src='https://documentation.markid.eu/resources/primary-color.png' />
