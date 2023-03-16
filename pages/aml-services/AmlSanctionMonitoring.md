@@ -35,6 +35,7 @@ If you'll pass a *scanRef* in your request the type will automatically be counte
 |`nationality`  |`String`|Nationality of the monitored user.|
 |`dateOfBirth`  |`String`|Monitored user's date of birth.|
 |`country`      |`String`|Mandatory parameter for the `COMPANY` checks in alpha2/alpha3 format.|
+
 #### Example request with scanRef:
 
 ```json
