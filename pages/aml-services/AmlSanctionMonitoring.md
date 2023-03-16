@@ -22,9 +22,8 @@ To add a user to AML monitoring, the request must contain JSON with **scanRef** 
 
 To add a company to AML monitoring, the request must contain JSON with **name**, **country** and **type** set as **'COMPANY'** *monitoringId* is optional.
 
-:::note
+{: .note }  
 If you'll pass a *scanRef* in your request the type will automatically be counted as 'PERSON' regardless of the value provided in the request.
-:::
 
 |JSON key        |Type    |Explanation|
 |----------------|--------|-----------|
@@ -78,16 +77,15 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
 
 #### Monitoring user table
 
-|JSON key        |Type    |Explanation|
-|----------------|--------|-----------|
-|`monitoringId` |`String`|A unique string identifying a monitored user or company.|
-|`name`         |`String`|Name of the monitored user or company.|
-|`surname`      |`String`|Surname of the monitored user.|
-|`nationality`  |`String`|Nationality of the monitored user.|
-|`dob`  |`String`|Date of birth monitored user.|
-|`scanRefList`      |`List`|A unique string identifying a client verification on Mark ID’s side.<br/>If you have multiple verifications with the exact same data, and create monitoring users with both of them, only one user will be created and the scanRefList will have both scanRef's, as not to waste monitoring on the same data twice `scanRefList` will be a list of strings|
-|`alert_status`|`String`|Current status of the monitored user.<br/>Possible values:<br/>`ALERT`,<br/> `ACCEPTED`,<br/> `DECLINED`,<br/> `PENDING`
-
+| JSON key       | Type     | Explanation                                                                                                                                                                                                                                                                                                                                                |
+|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `monitoringId` | `String` | A unique string identifying a monitored user or company.                                                                                                                                                                                                                                                                                                   |
+| `name`         | `String` | Name of the monitored user or company.                                                                                                                                                                                                                                                                                                                     |
+| `surname`      | `String` | Surname of the monitored user.                                                                                                                                                                                                                                                                                                                             |
+| `nationality`  | `String` | Nationality of the monitored user.                                                                                                                                                                                                                                                                                                                         |
+| `dob`          | `String` | Date of birth monitored user.                                                                                                                                                                                                                                                                                                                              |
+| `scanRefList`  | `List`   | A unique string identifying a client verification on Mark ID’s side.<br/>If you have multiple verifications with the exact same data, and create monitoring users with both of them, only one user will be created and the scanRefList will have both scanRef's, as not to waste monitoring on the same data twice `scanRefList` will be a list of strings |
+| `alert_status` | `String` | Current status of the monitored user.<br/>Possible values:<br/>`ALERT`,<br/> `ACCEPTED`,<br/> `DECLINED`,<br/> `PENDING`                                                                                                                                                                                                                                   |
 
 #### Results table
 
@@ -170,9 +168,8 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
     ]
 }  
 ```
-:::note
+{: .note }  
 `companyId`, `beneficiaryId`, `comments`, `pepsStatus`,`status_set_by`, `status_set_at`, `adverseMediaStatus`, and `sanctionsStatus` also appear in the results if the user has a company assigned to him.
-:::
 
 ### Viewing entries in AML monitoring
 To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/api/v2/get-aml-users`
@@ -195,13 +192,13 @@ To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/
             "alert_status": "ACCEPTED",
             "is_suspected": false,
             "whitelisted": false
-        },
+        }
     ]
 }
 ```
-:::note
+{: .note }
 If the alert_status has "DECLINED" value, that user is not monitored anymore and the data won't be updated further.
-:::
+
 ### Deleting an entry
 To delete an entry from monitoring list, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/delete-monitoring-user/` with monitoring ID in the request body.
 
