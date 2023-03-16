@@ -11,7 +11,6 @@ This service checks whether a company has an AML risk, if it has any identified 
 
 {: .note }  Pricing
 Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
-:::
 
 ## Callback data
 The service check returns company's data in JSON format.

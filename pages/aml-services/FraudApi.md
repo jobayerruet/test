@@ -30,7 +30,6 @@ The request must contain **basic auth** headers where *username* is **API key** 
 - sales@markid.lt
 - info@markid.lt
 - via Dashboard
-:::
 
 The request must contain JSON with parameters:
 

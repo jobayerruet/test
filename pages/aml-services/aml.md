@@ -12,7 +12,6 @@ This service checks whether given person is in PEP or sanctions list, checks adv
 
 {: .note }  Pricing
 Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
-:::
 
 ## Callback data
 The service check returns data associated with the person under check in JSON format.
