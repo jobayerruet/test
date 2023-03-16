@@ -115,6 +115,7 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
 | `isActive`         | `Bool`    | Indicated whether a record is active.                                                                                                                                         |
 | `checkDate`        | `String`  | Date and time of when AML name service was checked.                                                                                                                           |
 | `whitelisted`      | `Bool`    | Boolean indicator if the entry is whitelisted.                                                                                                                                |
+
 ##### Example request:
 ```json
 {
