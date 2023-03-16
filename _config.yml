@@ -1,0 +1,7 @@
+title: Mark ID
+remote_theme: pmarsceill/just-the-docs
+
+callouts:
+  note:
+    title: Note
+    color: blue
