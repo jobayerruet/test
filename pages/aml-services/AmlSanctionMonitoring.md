@@ -22,8 +22,9 @@ To add a user to AML monitoring, the request must contain JSON with **scanRef** 
 
 To add a company to AML monitoring, the request must contain JSON with **name**, **country** and **type** set as **'COMPANY'** *monitoringId* is optional.
 
-{: .note }
+:::note
 If you'll pass a *scanRef* in your request the type will automatically be counted as 'PERSON' regardless of the value provided in the request.
+:::
 
 |JSON key        |Type    |Explanation|
 |----------------|--------|-----------|
@@ -169,8 +170,9 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
     ]
 }  
 ```
-{: .note }
+:::note
 `companyId`, `beneficiaryId`, `comments`, `pepsStatus`,`status_set_by`, `status_set_at`, `adverseMediaStatus`, and `sanctionsStatus` also appear in the results if the user has a company assigned to him.
+:::
 
 ### Viewing entries in AML monitoring
 To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/api/v2/get-aml-users`
@@ -197,9 +199,9 @@ To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/
     ]
 }
 ```
-{: .note }
+:::note
 If the alert_status has "DECLINED" value, that user is not monitored anymore and the data won't be updated further.
-
+:::
 ### Deleting an entry
 To delete an entry from monitoring list, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/delete-monitoring-user/` with monitoring ID in the request body.
 

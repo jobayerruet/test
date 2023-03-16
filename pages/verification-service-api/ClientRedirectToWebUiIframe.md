@@ -74,7 +74,7 @@ An example redirect url with english locale: <br/> https://ui.markid.eu/?authTok
   </body>
 </html>
 ```
-{: .note }
+:::note
 The data object can be found in the console.log message. The **allowfullscreen** attribute is mandatory if you're using our 3D liveness feature.
 :::
 

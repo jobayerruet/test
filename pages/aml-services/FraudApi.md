@@ -25,11 +25,12 @@ Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/check`
 
 The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
 
-{: .note }
+:::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
 - sales@markid.lt
 - info@markid.lt
 - via Dashboard
+:::
 
 The request must contain JSON with parameters:
 
