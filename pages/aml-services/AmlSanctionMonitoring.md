@@ -197,9 +197,9 @@ To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/
     ]
 }
 ```
-:::note
+{: .note }
 If the alert_status has "DECLINED" value, that user is not monitored anymore and the data won't be updated further.
-:::
+
 ### Deleting an entry
 To delete an entry from monitoring list, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/delete-monitoring-user/` with monitoring ID in the request body.
 
