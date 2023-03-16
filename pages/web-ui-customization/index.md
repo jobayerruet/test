@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Web UI customization
-nav_order: 1
+nav_order: 5
 ---
 
 # Web UI customization
