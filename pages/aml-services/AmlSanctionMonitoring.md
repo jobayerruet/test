@@ -22,7 +22,7 @@ To add a user to AML monitoring, the request must contain JSON with **scanRef** 
 
 To add a company to AML monitoring, the request must contain JSON with **name**, **country** and **type** set as **'COMPANY'** *monitoringId* is optional.
 
-{: .note }  
+{: .note }
 If you'll pass a *scanRef* in your request the type will automatically be counted as 'PERSON' regardless of the value provided in the request.
 
 |JSON key        |Type    |Explanation|
@@ -90,31 +90,31 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
 
 #### Results table
 
-|JSON key        |Type    |Explanation|
-|----------------|--------|-----------|
-|`serviceSuspected`  |`Bool`      |Indicates whether a service found a record about the person under check.| 
-|`checkSuccessful`   |`Bool`      |Indicated whether an error occurred while doing a check.                |
-|`serviceFound`      |`Bool`      |Indicates whether a service was found for a given country.              |
-|`serviceUsed`       |`Bool`      |Indicated whether a service was used.                                   |
-|`overallStatus`     |`String`    |A mapping string indicating overall status of the check.                |
-|`status`          |`Object`    |The overall status of the service check.                   | 
-|`data`            |`List`      |Data returned from services.                               |
-|`serviceName`     |`String`    |The name of the service that was used to check a person.   |
-|`serviceGroupType`|`String`    |The type of the service that was used. It is always `AML`. |
-|`uid`             |`String`    |A unique identifier for a request. NOTE that it is unique only in one request scope. It is not unique globally. This parameter is only useful when doing multi-person checks.|
-|`errorMessage`    |`String`    |In case of an error in the checking process a human readable error message is given.|
-|`name`              |`String`    |The name of the person in the service's database.          | 
-|`surname`           |`String`    |The surname of the person in the service's database.       |
-|`nationality`       |`String`    |The nationality of the person in the service's database.   |
-|`dob`               |`String`    |The date of birth of the person in the service's database. |
-|`suspicion`         |`String`    |Tells the kind of the suspicion.<br/>Possible values:<br/>`PEPS`<br/>`SANCTION`<br/>`INTERPOL`<br/>`OTHER`|
-|`reason`            |`String`    |Tells the reason of the kind of the suspicion.             |
-|`score`             |`Integer`   |Confidence coefficient that the information about the person is true.|
-|`lastUpdate`        |`String`    |Date of when the record was last updated.                  |
-|`isPerson`          |`Bool`      |Indicates whether the record is about a person.            |
-|`isActive`          |`Bool`      |Indicated whether a record is active.                      |
-|`checkDate`         |`String`    |Date and time of when AML name service was checked.        |
-|`whitelisted`       |`Bool`      |Boolean indicator if the entry is whitelisted.             |
+| JSON key           | Type      | Explanation                                                                                                                                                                   |
+|--------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `serviceSuspected` | `Bool`    | Indicates whether a service found a record about the person under check.                                                                                                      | 
+| `checkSuccessful`  | `Bool`    | Indicated whether an error occurred while doing a check.                                                                                                                      |
+| `serviceFound`     | `Bool`    | Indicates whether a service was found for a given country.                                                                                                                    |
+| `serviceUsed`      | `Bool`    | Indicated whether a service was used.                                                                                                                                         |
+| `overallStatus`    | `String`  | A mapping string indicating overall status of the check.                                                                                                                      |
+| `status`           | `Object`  | The overall status of the service check.                                                                                                                                      | 
+| `data`             | `List`    | Data returned from services.                                                                                                                                                  |
+| `serviceName`      | `String`  | The name of the service that was used to check a person.                                                                                                                      |
+| `serviceGroupType` | `String`  | The type of the service that was used. It is always `AML`.                                                                                                                    |
+| `uid`              | `String`  | A unique identifier for a request. NOTE that it is unique only in one request scope. It is not unique globally. This parameter is only useful when doing multi-person checks. |
+| `errorMessage`     | `String`  | In case of an error in the checking process a human readable error message is given.                                                                                          |
+| `name`             | `String`  | The name of the person in the service's database.                                                                                                                             | 
+| `surname`          | `String`  | The surname of the person in the service's database.                                                                                                                          |
+| `nationality`      | `String`  | The nationality of the person in the service's database.                                                                                                                      |
+| `dob`              | `String`  | The date of birth of the person in the service's database.                                                                                                                    |
+| `suspicion`        | `String`  | Tells the kind of the suspicion.<br/>Possible values:<br/>`PEPS`<br/>`SANCTION`<br/>`INTERPOL`<br/>`OTHER`                                                                    |
+| `reason`           | `String`  | Tells the reason of the kind of the suspicion.                                                                                                                                |
+| `score`            | `Integer` | Confidence coefficient that the information about the person is true.                                                                                                         |
+| `lastUpdate`       | `String`  | Date of when the record was last updated.                                                                                                                                     |
+| `isPerson`         | `Bool`    | Indicates whether the record is about a person.                                                                                                                               |
+| `isActive`         | `Bool`    | Indicated whether a record is active.                                                                                                                                         |
+| `checkDate`        | `String`  | Date and time of when AML name service was checked.                                                                                                                           |
+| `whitelisted`      | `Bool`    | Boolean indicator if the entry is whitelisted.                                                                                                                                |
 ##### Example request:
 ```json
 {
@@ -169,6 +169,7 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/a
     ]
 }  
 ```
+
 {: .note }
 `companyId`, `beneficiaryId`, `comments`, `pepsStatus`,`status_set_by`, `status_set_at`, `adverseMediaStatus`, and `sanctionsStatus` also appear in the results if the user has a company assigned to him.
 
@@ -197,6 +198,7 @@ To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/
     ]
 }
 ```
+
 {: .note }
 If the alert_status has "DECLINED" value, that user is not monitored anymore and the data won't be updated further.
 
